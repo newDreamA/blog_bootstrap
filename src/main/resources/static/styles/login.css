@@ -1,0 +1,14 @@
+.loginBtn{
+	border:none;
+	cursor:pointer;
+	background:url(../images/login/loginBtn.png) top left no-repeat;
+	color:#FFF;
+	font-size:24px;
+	text-align:center;
+	width:150px;
+	height:54px;
+	float:
+	left;
+}
+
+

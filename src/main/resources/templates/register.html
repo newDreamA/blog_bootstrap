@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/header :: header}">
+<body>
+ <div class="container">
+ 	<form th:action="@{/register}" class="form-horizontal" method="post"  role="form">
+ 		<div class="row form-group">
+ 			<h2>注册成为博主</h2>
+ 		</div>
+ 		<div class="row form-group">
+ 			<label class="control-label" for="username">账号:</label>
+ 			<div class="col-md-8"><input id="username" name="username" maxlength="20"type="text" class="form-control" placeholder="请输入账号，至少3个字符，至多20个字符"></div>
+ 		</div>
+ 		<div class="row form-group">
+ 			<label class="control-label" for="email">邮箱:</label>
+ 			<div class="col-md-8"><input id="email" name="email" maxlength="50" type="email"  class="form-control" placeholder="请输入邮箱"></div>
+ 		</div>
+ 		<div class="row form-group">
+ 			<label class="control-label" for="email">姓名:</label>
+ 			<div class="col-md-8"><input id="name" name="name" maxlength="20" type="text" class="form-control" placeholder="请输入姓名，至少2个字符，至多20个"></div>
+ 		</div>
+ 		<div class="row form-group">
+ 			<label class="control-label" for="password">密码:</label>
+ 			<div class="col-md-8"><input id="password" name="password" maxlength="30" type="password" class="form-control" placeholder="请输入密码，字母或特殊符号和数字结合"></div>
+ 		</div>
+
+ 		<div class="row form-group">
+ 			<div class="col-md-2"></div>
+ 				<button type="submit" class="loginBtn">提交</button>
+
+ 		</div>
+ 	</form>
+ </div>
+ <div th:replace="~{fragments/footer :: footer}">...</div>
+</body>
+</html>
