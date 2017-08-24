@@ -47,11 +47,13 @@
            <div class="row form-group">
            	<div class="col-sm-1"></div>
                <div class="col-sm-10">
-                   <button type="button"  id="submit_btn" class="loginBtn">&nbsp;登&nbsp;录&nbsp; </button>
+                   <button type="submit"  id="submit_btn" class="loginBtn">&nbsp;登&nbsp;录&nbsp; </button>
 
                </div>
            </div>
-
+           <div class=" col-md-5" th:if="${loginError}">
+               <p class="blog-label-error" th:text="${errorMsg}"></p>
+           </div>
         </form>
     </div>
 </div>

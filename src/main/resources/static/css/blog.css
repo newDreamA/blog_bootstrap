@@ -63,3 +63,7 @@
 	float:
 	left;
 }
+
+.blog-label-error {
+    color: #d9534f;
+}

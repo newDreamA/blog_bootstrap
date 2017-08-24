@@ -11,4 +11,6 @@ import com.waylau.spring.boot.bootstrap.domain.User;
  * @author <a href="https://waylau.com">Way Lau</a> 
  */
 public interface UserRepository extends JpaRepository<User, Long> {
+    User findByUsername(String username);
+
 }

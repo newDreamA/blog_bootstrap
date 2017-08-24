@@ -1,9 +1,10 @@
 package com.waylau.spring.boot.bootstrap.controller;
 
-import com.waylau.spring.boot.bootstrap.service.ImageCodeService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.waylau.spring.boot.bootstrap.service.impl.ImageCodeService;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -25,6 +26,13 @@ public class LoginController {
 
     @RequestMapping("/login")
     public String login(){
+        return "login";
+    }
+
+    @GetMapping("/login-error")
+    public String loginError(Model model) {
+        model.addAttribute("loginError", true);
+        model.addAttribute("errorMsg", "登陆失败，账号或者密码错误！");
         return "login";
     }
 

@@ -1,4 +1,4 @@
-package com.waylau.spring.boot.bootstrap.service;
+package com.waylau.spring.boot.bootstrap.service.impl;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
