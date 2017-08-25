@@ -45,7 +45,8 @@ public class MainViewController {
         List<Authority> authorities = new ArrayList<>();
         authorities.add(authorityService.getAuthorityById(ROLE_USER_AUTHORITY_ID));
         user.setAuthorities(authorities);
-        User newUser =userService.saveUser(user);
+        user.setEncodePassword(user.getPassword());
+        userService.saveUser(user);
 
 
         return "redirect:/login";

@@ -16,8 +16,8 @@ import java.util.List;
 @Controller
 @RequestMapping("/admins")
 public class AdminController {
-    @GetMapping("/list")
-    public ModelAndView getListUser(Model model){
+    @GetMapping
+    public ModelAndView listUsers(Model model){
         List<Menu> list = new ArrayList<Menu>();
         list.add(new Menu("用户管理", "/users"));
         list.add(new Menu("角色管理", "/roles"));
